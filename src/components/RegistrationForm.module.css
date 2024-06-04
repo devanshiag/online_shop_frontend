@@ -1,0 +1,70 @@
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Optional: Center vertically as well */
+  /* Other styles for the container (optional) */
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    padding: 20px;
+    max-width: 380px; /* Set a max-width for the form */
+  width: 100%;
+  margin: auto;
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .gridContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+    width: 100%;
+  }
+  
+  .gridItem {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    text-align: left;
+  }
+  
+  .input {
+    width: 100%;
+    padding: 0.4rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  .button {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    margin-top: 15px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: #6bcb70da
+  }
+  
+  .error {
+    color: red;
+    font-size: 0.875rem;
+  }

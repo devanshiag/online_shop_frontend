@@ -1,0 +1,89 @@
+/* .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #4CAF50;
+    color: white;
+    width: 100vw;
+  }
+  
+  .logo h1 {
+    margin: 0;
+  }
+  
+  .nav {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .button {
+    background-color: white;
+    color: #4CAF50;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  .button:hover {
+    background-color: #45a049;
+  }
+   */
+
+   /* MainHeader.css */
+
+header {
+  background-color: #28a745;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+header nav {
+  display: flex;
+  gap: 10px;
+}
+
+header nav a {
+  text-decoration: none;
+  color: #fff;
+  background-color: #007bff;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+header nav a:hover {
+  background-color: #0056b3;
+}
+
+.button {
+  background-color: white;
+  color: #4CAF50;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.button:hover {
+  background-color: #6bcb70da;
+  color: #ddd;
+}
