@@ -26,6 +26,7 @@ const MainHeader = () => {
       <nav className={styles.nav}>
         <button onClick={() => navigate('/register')} className={styles.button}>Register</button>
         <button onClick={() => navigate('/customers')} className={styles.button}>Customer List</button>
+        <button onClick={() => navigate('/customer-detail')} className={styles.button}>Customer Detail</button>
         <button onClick={handleLogout} className={styles.button}>Logout</button>
         
         {/* {keycloak.authenticated && (

@@ -13,7 +13,13 @@ const initKeycloak = async () => {
     });
 
     try {
-      await keycloakInstance.init({ onLoad: 'login-required'});
+      await keycloakInstance.init({ onLoad: 'login-required',
+      checkLoginIframe: false,
+      redirectUri: window.location.origin,
+      });
+
+       
+      
     } catch (error) {
       console.error('Error initializing Keycloak:', error);
       // Optionally, display an error message to the user

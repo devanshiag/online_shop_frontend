@@ -32,7 +32,6 @@
 // export default App;
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { ReactKeycloakProvider } from '@react-keycloak/web';
 import initKeycloak from './Keycloak';
 import MainHeader from './components/MainHeader';
 import RegistrationForm from './components/RegistrationForm';
@@ -42,6 +41,7 @@ import { useState, useEffect } from 'react';
 import PrivateRoute from './PrivateRoute';
 import './App.css';
 import { KeycloakContext } from './KeycloakContext';
+import CustomerDetail from './components/CustomerDetail';
 
 const App = () => {
   const [keycloak, setKeycloak] = useState(null);
@@ -54,13 +54,15 @@ const App = () => {
     init();
   }, []);
 
+  
+
   if (!keycloak) {
     return <div>Loading...</div>; // Add a loading state while Keycloak is initializing
   }
 
 
 return (
-  
+  <>
   <KeycloakContext.Provider value={keycloak}>
     <Router>
       <div className="app-container">
@@ -70,15 +72,18 @@ return (
           <Routes>
           <Route path="/register" element={<RegistrationForm />} />
 
-            <Route path="/customers" element={<PrivateRoute><CustomerList /></PrivateRoute>} />
+            <Route path="/customers" element={<PrivateRoute roles={['admin']}><CustomerList /></PrivateRoute>} />
+
             <Route path="/customers/:id/edit" element={<PrivateRoute><CustomerEdit /></PrivateRoute>} />
+            <Route path="/customer-detail" element={<PrivateRoute roles={['user']}><CustomerDetail /></PrivateRoute>} />
+
             {/* ... */}
           </Routes>
         </div>
       </div>
     </Router>
   </KeycloakContext.Provider>
-  
+  </>
 );
 };
 
